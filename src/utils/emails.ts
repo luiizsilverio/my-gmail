@@ -66,7 +66,7 @@ export const EMAILS = [
   {
     id: "7",
     name: "Visa",
-    avatar: "https://mighty.tools/mockmind-api/content/human/62.jpg",
+    avatar: "https://mighty.tools/mockmind-api/content/human/63.jpg",
     marker: "",
     subject: "Coming soon: an easier way to verify you on Click to Pay with Visa",
     message: "We take the security of your Visa card information very seriously. That's why we're rolling out an easier way to verify it's you. When you make a payment with Click to Pay, we currently send you a verification code via email. To make this even more accessible and convenient we may now also be sending this code by SMS. Message and data rates may apply.",
@@ -76,7 +76,7 @@ export const EMAILS = [
   {
     id: "8",
     name: "Stackoverflow",
-    avatar: "https://mighty.tools/mockmind-api/content/human/55.jpg",
+    avatar: "https://mighty.tools/mockmind-api/content/human/57.jpg",
     marker: "",
     subject: "The Overflow #69: When internal devs are your customers",
     message: "Welcome to ISSUE #69 of the Overflow! This newsletter is by developers, for developers, written and curated by the Stack Overflow team and Cassidy Williams at Netlify. Our menu this week: branch out with Git, fade to black in old video games, and prevent code injection in JavaScript and Node.",
