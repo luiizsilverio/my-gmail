@@ -14,7 +14,7 @@ export default function DrawerLayout() {
       }}
       drawerContent={(props) => <DrawerContent {...props} />}
     >
-      {/* <Drawer.Screen
+      <Drawer.Screen
         name="(tabs)"
         options={
           {
@@ -37,7 +37,7 @@ export default function DrawerLayout() {
         }
       />
       <Drawer.Screen
-        name="starts"
+        name="starred"
         options={
           {
             title: "Com estrelas",
@@ -64,7 +64,7 @@ export default function DrawerLayout() {
         }
       />
       <Drawer.Screen
-        name="send"
+        name="sent"
         options={
           {
             title: "Enviado",
@@ -83,7 +83,7 @@ export default function DrawerLayout() {
       />
 
       <Drawer.Screen
-        name="exit-box"
+        name="outbox"
         options={
           {
             title: "Caixa de saída",
@@ -113,7 +113,7 @@ export default function DrawerLayout() {
       />
 
       <Drawer.Screen
-        name="span"
+        name="spam"
         options={
           {
             title: "Spam",
@@ -128,7 +128,6 @@ export default function DrawerLayout() {
           {
             title: "Lixeira",
             iconName: "delete-outline",
-            isDivider: true,
           } as CustomOptions
         }
       />
@@ -136,7 +135,7 @@ export default function DrawerLayout() {
         name="read"
         options={
           {
-            title: "Lixeira",
+            title: "Lidos",
             iconName: "label-important-outline",
             sectionTitle: "Marcadores",
           } as CustomOptions
@@ -146,7 +145,7 @@ export default function DrawerLayout() {
         name="general"
         options={
           {
-            title: "Lixeira",
+            title: "Geral",
             iconName: "label-important-outline",
             isDivider: true,
           } as CustomOptions
@@ -188,7 +187,7 @@ export default function DrawerLayout() {
             iconName: "help-outline",
           } as CustomOptions
         }
-      /> */}
+      /> 
     </Drawer>
   )
 }

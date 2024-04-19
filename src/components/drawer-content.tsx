@@ -1,5 +1,8 @@
-import { Image, ScrollView, View } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
 import { DrawerContentComponentProps } from "@react-navigation/drawer";
+
+import { DrawerButton } from "@/components/drawer-button";
+import { CustomOptions } from "@/@types/navigation";
 
 export function DrawerContent(props: DrawerContentComponentProps) {
   return (
@@ -20,13 +23,44 @@ export function DrawerContent(props: DrawerContentComponentProps) {
           {
             props.state.routes.map((route, index) => {
               const isFocused = props.state.index === index;
-              const options = props.descriptors[route.key].options;
+              const options = props.descriptors[route.key].options as CustomOptions;
 
               if (options.title === undefined) {
                 return 
               }
               
-              return <View key={route.key}></View>
+              const onPress = () => {
+                const event = props.navigation.emit({
+                  type: "drawerItemPress",
+                  canPreventDefault: true,
+                  target: route.key
+                })
+                
+                if (!isFocused && !event?.defaultPrevented) {
+                  props.navigation.navigate(route.name, route.params);
+                }
+              }
+
+              return (
+                <View key={route.key}>
+                  {
+                    options.sectionTitle && (
+                      <Text className="text-gray-400 text-sm font-heading uppercase ml-4 mt-6">
+                        {options.sectionTitle}
+                      </Text>
+                    )
+                  }
+
+                  <DrawerButton 
+                    title={options.title}
+                    isFocused={isFocused}
+                    isDivider={options.isDivider}
+                    iconName={options.iconName}
+                    notifications={options.notifications}
+                    onPress={onPress}
+                  />
+                </View>
+              )
             })
           }
         </View>
