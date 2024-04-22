@@ -6,11 +6,11 @@ import { CustomOptions } from "@/@types/navigation";
 
 export function DrawerContent(props: DrawerContentComponentProps) {
   return (
-    <View className="flex-1 bg-gray-600 overflow-hidden">
+    <View className="flex-1 bg-gray-700 overflow-hidden">
       <View className="mt-20 w-full border-b pb-6 border-gray-500">
         <Image 
           source={require("@/assets/logo.png")}
-          className="w-28 ml-5"
+          className="w-28 ml-6 mt-10"
           resizeMode="contain" 
         />
       </View>
@@ -25,9 +25,7 @@ export function DrawerContent(props: DrawerContentComponentProps) {
               const isFocused = props.state.index === index;
               const options = props.descriptors[route.key].options as CustomOptions;
 
-              if (options.title === undefined) {
-                return 
-              }
+              if (options.title === undefined) return;
               
               const onPress = () => {
                 const event = props.navigation.emit({
@@ -42,7 +40,7 @@ export function DrawerContent(props: DrawerContentComponentProps) {
               }
 
               return (
-                <View key={route.key}>
+                <View key={route.key} className="w-full">
                   {
                     options.sectionTitle && (
                       <Text className="text-gray-400 text-sm font-heading uppercase ml-4 mt-6">
