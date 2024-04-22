@@ -14,8 +14,8 @@ Aplicação desenvolvida em React Native, que imita o layout do App do GMail, ut
 
 ## :camera_flash: Screenshots
 <table>
-  <tr><img src="https://github.com/luiizsilverio/my-gmail/blob/main/src/assets/tela1.png"></tr>
-  <tr><img src="https://github.com/luiizsilverio/my-gmail/blob/main/src/assets/tela1.png"></tr>
+  <tr><img src="https://github.com/luiizsilverio/my-gmail/blob/master/src/assets/tela1.png"></tr>
+  <tr><img src="https://github.com/luiizsilverio/my-gmail/blob/master/src/assets/tela1.png"></tr>
 </table>
 
 
